@@ -1,0 +1,23 @@
+=================================
+		   Middleware
+=================================
+=========== VERSION UDP 1.1 ===========
+Versão Instável* com integração com a interface;
+Velocidade do Stream quase tempo real; 
+Permite apenas 1 servidor;
+Permite apenas 1 cliente;
+Fotos salvas com nome "hora:min:seg.png";
+Videos salvos com nome "hora:min:seg.avi";
+Funcionalidades:
+	- Tirar foto instantanêa;
+	- Tirar foto periódica (tempo especificado em minutos);
+	- Exibir Streaming;
+	- Exibir Streaming no QT;
+=====================================
+
+***************************INSTABILIDADE***************************
+-Necessária mudança no acesso concorrente ao Frame, causa o fechamento abrupto do programa;
+	#Solução momentânea -> clicar no botão de stream para ligar e desligar, assim o stream volta da instabilidade; 
+	;Corrupt JPEG data: 3187 extraneous bytes before marker 0x10;
+	;Corrupt JPEG data: premature end of data segment;
+	;Corrupt JPEG data: premature end of data segment;
