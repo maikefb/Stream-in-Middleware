@@ -39,6 +39,9 @@
 #define PORT_MASTER 3128
 #define PORT 3129
 
+//Variavel para contar os pacotes perdidos
+#define N 5000
+
 #define LARGURA 640
 #define ALTURA 480
 

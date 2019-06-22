@@ -112,10 +112,13 @@ void *client_master(void *arg)
 
 void *client(void *arg)
 {
+  //Criando um Arquivo TXT para salvar os dados
+
+
+
   parameters *par = (parameters *)arg;
   int bytes,r[1];
-  //int contapacotes = 0; //contar numero de pacotes envIADOS
-  //int N = 10000 ; // numero de pacotes para calcular perdas
+  int contapacotes = 0; //contar numero de pacotes envIADOS
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   int imgSize = frame.total() * frame.elemSize();
@@ -274,7 +277,7 @@ void *server(void *arg)
     f[i] = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   }
 
-  // Inicia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
+  // Incia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
 
   // Recebe imagem do cliente
 
@@ -286,18 +289,14 @@ void *server(void *arg)
   int recvMSG;
   char iBUFF[65540];
   int ibuff;
-  //int contapacotes = 0 ; 
-  //int N = 10000 ; //numero de pacotes recebidos pata calcular perdas
+  int contapacotes = 0 ; 
   //VARIAVEIS DO TESTE DE BUFFER
     
- for (;;) {
-//while (contapacotes < N) {
+  while (contapacotes < N) {
     do {
-        // printf("ESTOU AQUI NESTE MOMENTO, TRAVADO\n");
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-    	//contapacotes ++ ;
-    	//printf("Numero do pacote recebido: %d\n",contapacotes );
-       	// printf("DESTRAVEI CARALHO | VALOR DO recvMSG --> %d!!!!!1!!!!!!!!\n",recvMSG);
+    	contapacotes ++ ;
+    	conta_pacotes(contapacotes);
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
@@ -305,8 +304,8 @@ void *server(void *arg)
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-        //contapacotes ++ ;
-        //printf("Numero do pacote recebido: %d\n",contapacotes );
+        contapacotes ++ ;
+        conta_pacotes(contapacotes);
         if (recvMSG != 4096) {
 		    continue;
 	    }
@@ -316,23 +315,14 @@ void *server(void *arg)
 
     Mat rawData = Mat(1,4096*total_pack, CV_8UC3, longbuf);
     Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
-    //sem_wait(&sem_frame);
     frame = frameMod;
     frame_photo = frame;
     free(longbuf);
-    //if(control.stream == ON) {
-    	sem_post(&sem_stream);
-    	sem_post(&sem_streamQT);
-    //}
-    //if(control.video == ON) {
-    	sem_post(&sem_video);
-    //}
-    //if(control.photo == ON) {
-    	sem_post(&sem_fotoP);
-    //}
-    //resize(cacete,frame,Size(640,480),0,0, INTER_LINEAR);
-        
-    //fclose(f);
+    sem_post(&sem_stream);
+  	sem_post(&sem_streamQT);
+    sem_post(&sem_video);
+    sem_post(&sem_fotoP);
+    
   }
   close(sock_fd);
   pthread_exit(0);
@@ -475,4 +465,13 @@ int pegaip(char *var)
  system("rm ip.txt");
  fclose(fd);
  return 0;
+}
+
+void conta_pacotes(int pkt){
+
+  ofstream file;
+  file.open("Dados Pacotes.txt");
+  file << "Pacote : " << pkt << endl;
+  file.close();
+  
 }
