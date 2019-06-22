@@ -35,7 +35,6 @@ int invoke(parameters *arg)
     break;
   case STREAM_START:
     control.stream = ON;
-    //pthread_create(&t1, NULL, stream, (void *) arg);
     break;
   case STREAM_STOP:
     control.stream = OFF;
@@ -50,14 +49,12 @@ int invoke(parameters *arg)
     char str[32];
     delay = (long)*(arg->p0);
     control.photo = ON;
-    //pthread_create(&t2, NULL, photo_periodical, (void *) arg);
     break;
   case PHOTO_PERIOD_STOP:
     control.photo = OFF;
     break;
   case VIDEO_START:
     control.video = ON;
-    //pthread_create(&t3, NULL, video, (void *) arg);//tirar esta linha, colocar ela em outro lugar
     break;
   case VIDEO_STOP:
     control.video = OFF;
@@ -112,12 +109,8 @@ void *client_master(void *arg)
 
 void *client(void *arg)
 {
-  //Criando um Arquivo TXT para salvar os dados
-
-
-
   parameters *par = (parameters *)arg;
-  int bytes,r[1];
+  int r[1];
   int contapacotes = 0; //contar numero de pacotes envIADOS
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
@@ -168,8 +161,7 @@ void *client(void *arg)
   Mat sendTST;
   //VARIAVEIS DO TESTE DE BUFFER
 	
- while(1) {
- //while (contapacotes< N ) {
+  while (contapacotes< N ) {
     #ifdef ENABLE_RASPICAM
       CAM.grab();
       CAM.retrieve(frame);
@@ -180,7 +172,6 @@ void *client(void *arg)
     #endif
       
     resize(frame,sendTST,Size(300,300),0,0, INTER_LINEAR);
-    //cvtColor(frame,frame,CV_BGR2RGB);
     //sendTST = frame;
     vector<int> foto_parametros;
     foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
@@ -189,19 +180,18 @@ void *client(void *arg)
     int total = 1 + (encode.size() - 1) / 4096;
     int ibuff[1];
     ibuff[0] = total;
-    bytes = sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
-    //contapacotes ++; //CONTADOR PACOTES ENVIADOS
-    //printf("Pacote enviado enviado: %d\n",contapacotes);
+    sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
+    contapacotes ++; //CONTADOR PACOTES ENVIADOS
+    conta_pacotes(contapacotes);
 
     for (int i = 0; i < total; i++) {
-    	bytes = sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
-      	//contapacotes ++; //CONTADOR PACOTES ENVIADOS
-        printf("BYTES ENVIADOS NA SEGUNDA MENSAGEM --> %d\n",bytes);
-        //printf("Pacote enviado enviado: %d\n",contapacotes);   
+    	  sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
+      	contapacotes ++; //CONTADOR PACOTES ENVIADOS
+        conta_pacotes(contapacotes);
+           
     }
 
   }
-  /* -------Fim-aplicacao------- */
   close(s0);
   pthread_exit(0);
 }
@@ -214,16 +204,16 @@ void *server_master(void *arg)
   pthread_t t1, t2, t3;    
     
   pegaip(meu_ip);
-  //printf("[SERVIDOR] Meu IP: <%s>\n", meu_ip);
+
    if (scan_clients() < 0) {
      printf("ERRO no scan_clients\n");
    }
 
   pegaip(meu_ip);
   par->p0 = (unsigned char *)(meu_ip);
-  sem_init(&sem_stream, 0, 0); //Mudei aqui de 1 para 0
-  sem_init(&sem_foto, 0, 0); //Mudei aqui de 1 para 0
-  sem_init(&sem_video, 0, 0);//Acrescentei esta linha
+  sem_init(&sem_stream, 0, 0);
+  sem_init(&sem_foto, 0, 0); 
+  sem_init(&sem_video, 0, 0);
   sem_init(&sem_fotoP, 0, 1);
   sem_init(&sem_frame, 0, 1);
   sem_init(&sem_streamQT, 0, 0);
@@ -269,17 +259,11 @@ void *server(void *arg)
   
   length = sizeof(serv);
 
-  // Inicia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
-
   int i;
 
   for (i = 0; i < 10; i++) {
     f[i] = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   }
-
-  // Incia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
-
-  // Recebe imagem do cliente
 
   int ay = 0;
   int tamFrame = frame.total()*frame.elemSize();
