@@ -451,7 +451,8 @@ int pegaip(char *var)
  return 0;
 }
 
-void conta_pacotes(int pkt){
+void conta_pacotes(int pkt)
+{
 
   ofstream file;
   file.open("Dados Pacotes.txt");

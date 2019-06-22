@@ -160,5 +160,6 @@ void *video(void *arg);
 void *photo_periodical(void *arg);
 void photo();
 void debuger(int erro);
+void conta_pacotes(int pkt);
 /* funcao principal (usada para teste) */
 //int main(int argc, char const *argv[]);
