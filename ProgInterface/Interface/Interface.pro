@@ -38,8 +38,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    ../../../Middleware_UDP_1.1/System/invoke.cpp \
-    ../../../Middleware_UDP_1.1/System/usercall.cpp \
+    ../../System/invoke.cpp \
+    ../../System/usercall.cpp \
     pstream.cpp
 
 
