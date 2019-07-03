@@ -455,8 +455,8 @@ void conta_pacotes(int pkt)
 {
 
   ofstream file;
-  file.open("Dados Pacotes.txt");
-  file << "Pacote : " << pkt << endl;
+  file.open("Dados Pacotes.txt",ios::app);
+  file <<pkt << endl;
   file.close();
   
 }
