@@ -193,7 +193,6 @@ void *client(void *arg)
 
   }
   conta_pacotes(contapacotes);
-  exit(0);
   close(s0);
   pthread_exit(0);
 }
