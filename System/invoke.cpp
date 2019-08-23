@@ -185,6 +185,10 @@ void *client(void *arg)
     //conta_pacotes(contapacotes);
 
     for (int i = 0; i < total; i++) {
+      if (contapacotes >= N){
+          goto jmp;
+          }
+           
     	  sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
       	contapacotes ++; //CONTADOR PACOTES ENVIADOS
         //conta_pacotes(contapacotes);
@@ -192,7 +196,10 @@ void *client(void *arg)
     }
 
   }
+  jmp:
   conta_pacotes(contapacotes);
+  cout << "Contagem Terminada..."<<endl;
+  getchar();
   close(s0);
   pthread_exit(0);
 }
@@ -281,16 +288,16 @@ void *server(void *arg)
     do {
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
     	contapacotes ++ ;
-    	//conta_pacotes(contapacotes);
+    	conta_pacotes(contapacotes);
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
-    char *longbuf = new char[4096*total_pack];
+    char *longbuf = new char[4096*total_pack];//1450
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
         contapacotes ++ ;
-        //conta_pacotes(contapacotes);
+        conta_pacotes(contapacotes);
         if (recvMSG != 4096) {
 		    continue;
 	    }
@@ -309,7 +316,7 @@ void *server(void *arg)
     sem_post(&sem_fotoP);
     
   }
-  conta_pacotes(contapacotes);
+  //conta_pacotes(contapacotes);
   close(sock_fd);
   pthread_exit(0);
 }
