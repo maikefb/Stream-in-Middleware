@@ -41,6 +41,8 @@
 
 //Variavel para contar os pacotes perdidos
 #define N 40000
+//Varialvel de MAXIMUM TRASMISSION UNIT (MTU)
+#define MTU 1450  //Utilizado no momento 4096  -> Testar 1450
 
 #define LARGURA 640
 #define ALTURA 480

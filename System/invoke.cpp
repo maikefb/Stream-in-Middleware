@@ -177,7 +177,7 @@ void *client(void *arg)
     foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
     foto_parametros.push_back(80);
     imencode(".jpg",sendTST,encode,foto_parametros);
-    int total = 1 + (encode.size() - 1) / 4096;
+    int total = 1 + (encode.size() - 1) / MTU;
     int ibuff[1];
     ibuff[0] = total;
     sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
@@ -189,7 +189,7 @@ void *client(void *arg)
           goto jmp;
           }
            
-    	  sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
+    	  sendto(s1,&encode[i*MTU],MTU,0,(struct sockaddr *)&cli, slen);
       	contapacotes ++; //CONTADOR PACOTES ENVIADOS
         //conta_pacotes(contapacotes);
            
@@ -292,20 +292,20 @@ void *server(void *arg)
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
-    char *longbuf = new char[4096*total_pack];//1450
+    char *longbuf = new char[MTU*total_pack];//1450
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
         contapacotes ++ ;
         conta_pacotes(contapacotes);
-        if (recvMSG != 4096) {
+        if (recvMSG != MTU) {
 		    continue;
 	    }
-	    memcpy(&longbuf[i*4096],iBUFF,4096);
+	    memcpy(&longbuf[i*MTU],iBUFF,MTU);
         
     }
 
-    Mat rawData = Mat(1,4096*total_pack, CV_8UC3, longbuf);
+    Mat rawData = Mat(1,MTU*total_pack, CV_8UC3, longbuf);
     Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
     frame = frameMod;
     frame_photo = frame;
@@ -368,7 +368,7 @@ Mat stream_qt()
 {
   sem_wait(&sem_streamQT);
   Mat frame_qt = frame;
-  cvtColor(frame_qt,frame_qt,CV_BGR2RGB);  
+  //cvtColor(frame_qt,frame_qt,CV_BGR2RGB);  
   //sem_post(&sem_frame);
   return frame_qt;
 }
@@ -405,7 +405,7 @@ void photo()
   sprintf(foto,"FOTO-%d-%d-%d-%d:%d:%d.jpg", tempo->tm_year + 1900, tempo->tm_mon, tempo->tm_mday, tempo->tm_hour, tempo->tm_min, tempo->tm_sec);
 
   //sem_wait(&sem_foto);
-  cvtColor(frame_photo,frame_photo,CV_BGR2RGB);
+  //cvtColor(frame_photo,frame_photo,CV_BGR2RGB);
   imwrite(foto, frame_photo, foto_parametros);    
   //sem_post(&sem_foto);//comentei esta linha
 
