@@ -114,8 +114,6 @@ void *client(void *arg)
 {
   parameters *par = (parameters *)arg;
   int bytes,r[1];
-  //int contapacotes = 0; //contar numero de pacotes envIADOS
-  //int N = 10000 ; // numero de pacotes para calcular perdas
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   int imgSize = frame.total() * frame.elemSize();
@@ -166,7 +164,6 @@ void *client(void *arg)
   //VARIAVEIS DO TESTE DE BUFFER
 	
  while(1) {
- //while (contapacotes< N ) {
     #ifdef ENABLE_RASPICAM
       CAM.grab();
       CAM.retrieve(frame);
@@ -177,7 +174,6 @@ void *client(void *arg)
     #endif
       
     resize(frame,sendTST,Size(300,300),0,0, INTER_LINEAR);
-    //cvtColor(frame,frame,CV_BGR2RGB);
     //sendTST = frame;
     vector<int> foto_parametros;
     foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
@@ -187,14 +183,10 @@ void *client(void *arg)
     int ibuff[1];
     ibuff[0] = total;
     bytes = sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
-    //contapacotes ++; //CONTADOR PACOTES ENVIADOS
-    //printf("Pacote enviado enviado: %d\n",contapacotes);
 
     for (int i = 0; i < total; i++) {
     	bytes = sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
-      	//contapacotes ++; //CONTADOR PACOTES ENVIADOS
-        printf("BYTES ENVIADOS NA SEGUNDA MENSAGEM --> %d\n",bytes);
-        //printf("Pacote enviado enviado: %d\n",contapacotes);   
+       // printf("BYTES ENVIADOS NA SEGUNDA MENSAGEM --> %d\n",bytes);  
     }
 
   }
@@ -266,15 +258,12 @@ void *server(void *arg)
   
   length = sizeof(serv);
 
-  // Inicia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
 
   int i;
 
   for (i = 0; i < 10; i++) {
     f[i] = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   }
-
-  // Inicia a fila ? Modificar aqui para gerar uma thread que fica olhando pra fila ?
 
   // Recebe imagem do cliente
 
@@ -286,18 +275,11 @@ void *server(void *arg)
   int recvMSG;
   char iBUFF[65540];
   int ibuff;
-  //int contapacotes = 0 ; 
-  //int N = 10000 ; //numero de pacotes recebidos pata calcular perdas
   //VARIAVEIS DO TESTE DE BUFFER
     
  for (;;) {
-//while (contapacotes < N) {
     do {
-        // printf("ESTOU AQUI NESTE MOMENTO, TRAVADO\n");
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-    	//contapacotes ++ ;
-    	//printf("Numero do pacote recebido: %d\n",contapacotes );
-       	// printf("DESTRAVEI CARALHO | VALOR DO recvMSG --> %d!!!!!1!!!!!!!!\n",recvMSG);
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
@@ -305,8 +287,7 @@ void *server(void *arg)
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-        //contapacotes ++ ;
-        //printf("Numero do pacote recebido: %d\n",contapacotes );
+	    
         if (recvMSG != 4096) {
 		    continue;
 	    }
@@ -316,23 +297,21 @@ void *server(void *arg)
 
     Mat rawData = Mat(1,4096*total_pack, CV_8UC3, longbuf);
     Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
-    //sem_wait(&sem_frame);
+
     frame = frameMod;
     frame_photo = frame;
     free(longbuf);
-    //if(control.stream == ON) {
+
     	sem_post(&sem_stream);
     	sem_post(&sem_streamQT);
-    //}
-    //if(control.video == ON) {
+  
     	sem_post(&sem_video);
-    //}
-    //if(control.photo == ON) {
+   
     	sem_post(&sem_fotoP);
-    //}
+  
     //resize(cacete,frame,Size(640,480),0,0, INTER_LINEAR);
         
-    //fclose(f);
+   
   }
   close(sock_fd);
   pthread_exit(0);
@@ -385,8 +364,6 @@ Mat stream_qt()
 {
   sem_wait(&sem_streamQT);
   Mat frame_qt = frame;
-  cvtColor(frame_qt,frame_qt,CV_BGR2RGB);  
-  //sem_post(&sem_frame);
   return frame_qt;
 }
 
@@ -398,11 +375,9 @@ void *photo_periodical(void *arg)
   	sem_wait(&sem_fotoP);
   	if(control.photo == ON) {
     		photo();
-		//sem_post(&sem_frame);
+		
 	  	sleep((int)delay);
-  	}//else {
-	//	sem_post(&sem_frame);
-	//}    
+  	} 
   }
   pthread_exit(0);
 }
@@ -420,12 +395,9 @@ void photo()
   tempo = gmtime(&t);
 
   sprintf(foto,"FOTO-%d-%d-%d-%d:%d:%d.jpg", tempo->tm_year + 1900, tempo->tm_mon, tempo->tm_mday, tempo->tm_hour, tempo->tm_min, tempo->tm_sec);
-
-  //sem_wait(&sem_foto);
-  cvtColor(frame_photo,frame_photo,CV_BGR2RGB);
+	
   imwrite(foto, frame_photo, foto_parametros);    
-  //sem_post(&sem_foto);//comentei esta linha
-
+  
   return;
 }
 
