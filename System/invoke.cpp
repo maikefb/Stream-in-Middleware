@@ -110,8 +110,10 @@ void *client_master(void *arg)
 void *client(void *arg)
 {
   parameters *par = (parameters *)arg;
+
   int r[1];
   //int contapacotes = 0; //contar numero de pacotes envIADOS
+
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   int imgSize = frame.total() * frame.elemSize();
@@ -161,7 +163,9 @@ void *client(void *arg)
   Mat sendTST;
   //VARIAVEIS DO TESTE DE BUFFER
 	
+
   while (true) { //contapacotes< N
+
     #ifdef ENABLE_RASPICAM
       CAM.grab();
       CAM.retrieve(frame);
@@ -180,6 +184,7 @@ void *client(void *arg)
     int total = 1 + (encode.size() - 1) / MTU;
     int ibuff[1];
     ibuff[0] = total;
+
     sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
     //contapacotes ++; //CONTADOR PACOTES ENVIADOS
     //conta_pacotes(contapacotes);
@@ -267,11 +272,15 @@ void *server(void *arg)
   
   length = sizeof(serv);
 
+
   int i;
 
   for (i = 0; i < 10; i++) {
     f[i] = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   }
+
+
+  // Recebe imagem do cliente
 
   int ay = 0;
   int tamFrame = frame.total()*frame.elemSize();
@@ -281,6 +290,7 @@ void *server(void *arg)
   int recvMSG;
   char iBUFF[65540];
   int ibuff;
+
   //int contapacotes = 0 ; 
   //VARIAVEIS DO TESTE DE BUFFER
     
@@ -289,6 +299,7 @@ void *server(void *arg)
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
     	//contapacotes ++ ;
     	//conta_pacotes(contapacotes);
+
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
@@ -296,9 +307,11 @@ void *server(void *arg)
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
+
         //contapacotes ++ ;
         //conta_pacotes(contapacotes);
         if (recvMSG != MTU) {
+
 		    continue;
 	    }
 	    memcpy(&longbuf[i*MTU],iBUFF,MTU);
@@ -307,6 +320,7 @@ void *server(void *arg)
 
     Mat rawData = Mat(1,MTU*total_pack, CV_8UC3, longbuf);
     Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
+
     frame = frameMod;
     frame_photo = frame;
     free(longbuf);
@@ -315,6 +329,7 @@ void *server(void *arg)
     sem_post(&sem_video);
     sem_post(&sem_fotoP);
     
+
   }
   //conta_pacotes(contapacotes);
   close(sock_fd);
@@ -368,8 +383,7 @@ Mat stream_qt()
 {
   sem_wait(&sem_streamQT);
   Mat frame_qt = frame;
-  //cvtColor(frame_qt,frame_qt,CV_BGR2RGB);  
-  //sem_post(&sem_frame);
+
   return frame_qt;
 }
 
@@ -383,6 +397,7 @@ void *photo_periodical(void *arg)
     		photo();
 	  	  sleep((int)delay);
   	}  
+
   }
   pthread_exit(0);
 }
