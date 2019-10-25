@@ -175,8 +175,8 @@ void *client(void *arg)
       cam.read(frame);
     #endif
       
-    resize(frame,sendTST,Size(300,300),0,0, INTER_LINEAR);
-    //sendTST = frame;
+    //resize(frame,sendTST,Size(300,300),0,0, INTER_LINEAR);
+    sendTST = frame;
     vector<int> foto_parametros;
     foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
     foto_parametros.push_back(80);
