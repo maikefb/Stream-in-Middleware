@@ -111,7 +111,7 @@ void *client(void *arg)
 {
   parameters *par = (parameters *)arg;
   int r[1];
-  int contapacotes = 0; //contar numero de pacotes envIADOS
+  //int contapacotes = 0; //contar numero de pacotes envIADOS
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   int imgSize = frame.total() * frame.elemSize();
@@ -161,7 +161,7 @@ void *client(void *arg)
   Mat sendTST;
   //VARIAVEIS DO TESTE DE BUFFER
 	
-  while (contapacotes< N ) {
+  while (true) { //contapacotes< N
     #ifdef ENABLE_RASPICAM
       CAM.grab();
       CAM.retrieve(frame);
@@ -181,24 +181,24 @@ void *client(void *arg)
     int ibuff[1];
     ibuff[0] = total;
     sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
-    contapacotes ++; //CONTADOR PACOTES ENVIADOS
+    //contapacotes ++; //CONTADOR PACOTES ENVIADOS
     //conta_pacotes(contapacotes);
 
     for (int i = 0; i < total; i++) {
-      if (contapacotes >= N){
-          goto jmp;
-          }
+    //  if (contapacotes >= N){
+    //      goto jmp;
+    //      }
            
     	  sendto(s1,&encode[i*MTU],MTU,0,(struct sockaddr *)&cli, slen);
-      	contapacotes ++; //CONTADOR PACOTES ENVIADOS
+      	//contapacotes ++; //CONTADOR PACOTES ENVIADOS
         //conta_pacotes(contapacotes);
            
     }
 
   }
-  jmp:
-  conta_pacotes(contapacotes);
-  cout << "Contagem Terminada..."<<endl;
+  //jmp:
+  //conta_pacotes(contapacotes);
+  //cout << "Contagem Terminada..."<<endl;
   getchar();
   close(s0);
   pthread_exit(0);
@@ -281,14 +281,14 @@ void *server(void *arg)
   int recvMSG;
   char iBUFF[65540];
   int ibuff;
-  int contapacotes = 0 ; 
+  //int contapacotes = 0 ; 
   //VARIAVEIS DO TESTE DE BUFFER
     
-  while (contapacotes < N) {
+  while (true) {  //contapacotes< N
     do {
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-    	contapacotes ++ ;
-    	conta_pacotes(contapacotes);
+    	//contapacotes ++ ;
+    	//conta_pacotes(contapacotes);
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
@@ -296,8 +296,8 @@ void *server(void *arg)
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-        contapacotes ++ ;
-        conta_pacotes(contapacotes);
+        //contapacotes ++ ;
+        //conta_pacotes(contapacotes);
         if (recvMSG != MTU) {
 		    continue;
 	    }
@@ -381,11 +381,8 @@ void *photo_periodical(void *arg)
   	sem_wait(&sem_fotoP);
   	if(control.photo == ON) {
     		photo();
-		//sem_post(&sem_frame);
-	  	sleep((int)delay);
-  	}//else {
-	//	sem_post(&sem_frame);
-	//}    
+	  	  sleep((int)delay);
+  	}  
   }
   pthread_exit(0);
 }
@@ -404,10 +401,7 @@ void photo()
 
   sprintf(foto,"FOTO-%d-%d-%d-%d:%d:%d.jpg", tempo->tm_year + 1900, tempo->tm_mon, tempo->tm_mday, tempo->tm_hour, tempo->tm_min, tempo->tm_sec);
 
-  //sem_wait(&sem_foto);
-  //cvtColor(frame_photo,frame_photo,CV_BGR2RGB);
   imwrite(foto, frame_photo, foto_parametros);    
-  //sem_post(&sem_foto);//comentei esta linha
 
   return;
 }
@@ -425,7 +419,6 @@ void *video(void *arg)
 		}
 		video.release();
   }
-  //pthread_exit(0);
 }
 
 void debuger(int erro)

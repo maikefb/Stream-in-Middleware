@@ -24,10 +24,10 @@
 #include <netdb.h>
 
 //Define de habilitação da camêra USB, caso utilize a Câmera da Raspberry, comentar esta linha.
-//#define ENABLE_USBCAM
+#define ENABLE_USBCAM
 
 //Define de habilitação da RaspiCam, caso não possua a camêra ou as bibliotecas comentar esta linha.
-#define ENABLE_RASPICAM
+//#define ENABLE_RASPICAM
 
 //Include e chamada do ambiente da RaspiCam.
 #ifdef ENABLE_RASPICAM

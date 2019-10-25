@@ -46,8 +46,8 @@ SOURCES += \
 # Apagar a linha do invoke.hpp e usercall.hpp para poder configurar novamente
 HEADERS += \
         mainwindow.h \
-    ../../../Middleware_UDP_1.1/System/invoke.hpp \
-    ../../../Middleware_UDP_1.1/System/usercall.hpp \
+    ../../System/invoke.hpp \
+    ../../System/usercall.hpp \
     pstream.h
 
 

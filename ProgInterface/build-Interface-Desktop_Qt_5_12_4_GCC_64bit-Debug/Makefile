@@ -17,7 +17,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Interface -I. -I../Interface -isystem /usr/local/include -isystem /usr/local/include/opencv -isystem /usr/local/include/opencv2 -isystem /usr/local/include/opencv2/core -isystem /usr/local/include/opencv2/highgui -isystem /usr/local/include/opencv2/imgproc -isystem /usr/local/include/opencv2/flann -isystem /usr/local/include/opencv2/photo -isystem /usr/local/include/opencv2/video -isystem /usr/local/include/opencv2/features2d -isystem /usr/local/include/opencv2/objdetect -isystem /usr/local/include/opencv2/calib3d -isystem /usr/local/include/opencv2/ml -isystem /usr/local/include/opencv2/contrib -I../../../../Qt/5.12.4/gcc_64/include -I../../../../Qt/5.12.4/gcc_64/include/QtWidgets -I../../../../Qt/5.12.4/gcc_64/include/QtGui -I../../../../Qt/5.12.4/gcc_64/include/QtConcurrent -I../../../../Qt/5.12.4/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../../Qt/5.12.4/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../Interface -I. -I../Interface -isystem /usr/local/include -isystem /usr/local/include/opencv -isystem /usr/local/include/opencv2 -isystem /usr/local/include/opencv2/core -isystem /usr/local/include/opencv2/highgui -isystem /usr/local/include/opencv2/imgproc -isystem /usr/local/include/opencv2/flann -isystem /usr/local/include/opencv2/photo -isystem /usr/local/include/opencv2/video -isystem /usr/local/include/opencv2/features2d -isystem /usr/local/include/opencv2/objdetect -isystem /usr/local/include/opencv2/calib3d -isystem /usr/local/include/opencv2/ml -isystem /usr/local/include/opencv2/contrib -I/home/maike/Qt/5.12.4/gcc_64/include -I/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets -I/home/maike/Qt/5.12.4/gcc_64/include/QtGui -I/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent -I/home/maike/Qt/5.12.4/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/maike/Qt/5.12.4/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Interface1.0.0
-DISTDIR = /home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/.tmp/Interface1.0.0
+DISTDIR = /home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/.tmp/Interface1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/maike/Qt/5.12.4/gcc_64/lib
 LIBS          = $(SUBLIBS) -pthread `pkg-config opencv --cflags --libs` /home/maike/Qt/5.12.4/gcc_64/lib/libQt5Widgets.so /home/maike/Qt/5.12.4/gcc_64/lib/libQt5Gui.so /home/maike/Qt/5.12.4/gcc_64/lib/libQt5Concurrent.so /home/maike/Qt/5.12.4/gcc_64/lib/libQt5Core.so -lGL -lpthread   
@@ -67,203 +67,203 @@ OBJECTS       = main.o \
 		qrc_resource.o \
 		moc_mainwindow.o \
 		moc_pstream.o
-DIST          = ../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/linux.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/qconfig.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf \
+DIST          = /home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/linux.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/qconfig.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf \
 		../Interface/.qmake.stash \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/resources.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/moc.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/uic.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/lex.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resources.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/moc.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/uic.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/lex.prf \
 		../Interface/Interface.pro ../Interface/mainwindow.h \
-		../../../Middleware_UDP_1.1/System/invoke.hpp \
-		../../../Middleware_UDP_1.1/System/usercall.hpp \
+		../../System/invoke.hpp \
+		../../System/usercall.hpp \
 		../Interface/pstream.h ../Interface/main.cpp \
 		../Interface/mainwindow.cpp \
 		../../System/invoke.cpp \
@@ -280,397 +280,397 @@ first: all
 Interface: ui_mainwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: ../Interface/Interface.pro ../../../../Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf ../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/linux.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/qconfig.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf \
+Makefile: ../Interface/Interface.pro /home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf /home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/linux.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/qconfig.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf \
 		.qmake.stash \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/resources.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/moc.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/uic.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf \
-		../../../../Qt/5.12.4/gcc_64/mkspecs/features/lex.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resources.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/moc.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/uic.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf \
+		/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/lex.prf \
 		../Interface/Interface.pro \
 		../Interface/resource.qrc
 	$(QMAKE) -o Makefile ../Interface/Interface.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/unix.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/linux.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/qconfig.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_pre.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/unix.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/linux.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/sanitize.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/gcc-base-unix.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-base.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/common/g++-unix.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/qconfig.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3danimation_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dcore_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dextras_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dinput_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dlogic_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquick_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickextras_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickinput_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickrender_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_3drender_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_accessibility_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_charts_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_concurrent_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_core_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_datavisualization_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_dbus_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designer_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_designercomponents_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_edid_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_egl_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fb_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gamepad_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_glx_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_gui_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_help_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_input_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_kms_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_location_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimedia_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediagsttools_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_network_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_networkauth_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_nfc_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_opengl_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_openglextensions_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_packetprotocol_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioning_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_positioningquick_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_printsupport_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_purchasing_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qml_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldebug_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmldevtools_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qmltest_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quick_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickparticles_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickshapes_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_remoteobjects_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_repparser_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_script_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scripttools_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_scxml_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sensors_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialbus_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_serialport_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_service_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_sql_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_svg_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_testlib_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_texttospeech_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_theme_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uiplugin.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_uitools_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_vulkan_support_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandclient_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_waylandcompositor_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webchannel_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webengine_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_websockets_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_webview_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_widgets_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_x11extras_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xml_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_functions.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt_config.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++/qmake.conf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/spec_post.prf:
 .qmake.stash:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/qt.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/resources.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/moc.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/uic.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf:
-../../../../Qt/5.12.4/gcc_64/mkspecs/features/lex.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exclusive_builds.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/toolchain.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_pre.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resolve_config.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/default_post.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qml_debug.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/warn_on.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qt.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/resources.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/moc.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/opengl.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/uic.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/unix/thread.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/qmake_use.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/file_copies.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/testcase_targets.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/exceptions.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/yacc.prf:
+/home/maike/Qt/5.12.4/gcc_64/mkspecs/features/lex.prf:
 ../Interface/Interface.pro:
 ../Interface/resource.qrc:
 qmake: FORCE
@@ -688,8 +688,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Interface/resource.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../../../Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Interface/mainwindow.h ../../../Middleware_UDP_1.1/System/invoke.hpp ../../../Middleware_UDP_1.1/System/usercall.hpp ../Interface/pstream.h $(DISTDIR)/
+	$(COPY_FILE) --parents /home/maike/Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Interface/mainwindow.h ../../System/invoke.hpp ../../System/usercall.hpp ../Interface/pstream.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../Interface/main.cpp ../Interface/mainwindow.cpp ../../System/invoke.cpp ../../System/usercall.cpp ../Interface/pstream.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Interface/mainwindow.ui $(DISTDIR)/
 
@@ -719,7 +719,7 @@ compiler_rcc_make_all: qrc_resource.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_resource.cpp
 qrc_resource.cpp: ../Interface/resource.qrc \
-		../../../../Qt/5.12.4/gcc_64/bin/rcc \
+		/home/maike/Qt/5.12.4/gcc_64/bin/rcc \
 		../Interface/img/offline.png \
 		../Interface/img/uergs-logo.png
 	/home/maike/Qt/5.12.4/gcc_64/bin/rcc -name resource ../Interface/resource.qrc -o qrc_resource.cpp
@@ -727,338 +727,338 @@ qrc_resource.cpp: ../Interface/resource.qrc \
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
-moc_predefs.h: ../../../../Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp
-	g++ -pipe -g -Wall -W -dM -E -o moc_predefs.h ../../../../Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp
+moc_predefs.h: /home/maike/Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp
+	g++ -pipe -g -Wall -W -dM -E -o moc_predefs.h /home/maike/Qt/5.12.4/gcc_64/mkspecs/features/data/dummy.cpp
 
 compiler_moc_header_make_all: moc_mainwindow.cpp moc_pstream.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_mainwindow.cpp moc_pstream.cpp
 moc_mainwindow.cpp: ../Interface/mainwindow.h \
 		../Interface/pstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QObject \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qset.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QThread \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCore \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QStringList \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QObject \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QDebug \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qset.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QThread \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCore \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QStringList \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
 		moc_predefs.h \
-		../../../../Qt/5.12.4/gcc_64/bin/moc
-	/home/maike/Qt/5.12.4/gcc_64/bin/moc $(DEFINES) --include /home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/moc_predefs.h -I/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++ -I/home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/usr/local/include -I/usr/local/include/opencv -I/usr/local/include/opencv2 -I/usr/local/include/opencv2/core -I/usr/local/include/opencv2/highgui -I/usr/local/include/opencv2/imgproc -I/usr/local/include/opencv2/flann -I/usr/local/include/opencv2/photo -I/usr/local/include/opencv2/video -I/usr/local/include/opencv2/features2d -I/usr/local/include/opencv2/objdetect -I/usr/local/include/opencv2/calib3d -I/usr/local/include/opencv2/ml -I/usr/local/include/opencv2/contrib -I/home/maike/Qt/5.12.4/gcc_64/include -I/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets -I/home/maike/Qt/5.12.4/gcc_64/include/QtGui -I/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent -I/home/maike/Qt/5.12.4/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Interface/mainwindow.h -o moc_mainwindow.cpp
+		/home/maike/Qt/5.12.4/gcc_64/bin/moc
+	/home/maike/Qt/5.12.4/gcc_64/bin/moc $(DEFINES) --include /home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/moc_predefs.h -I/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++ -I/home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/usr/local/include -I/usr/local/include/opencv -I/usr/local/include/opencv2 -I/usr/local/include/opencv2/core -I/usr/local/include/opencv2/highgui -I/usr/local/include/opencv2/imgproc -I/usr/local/include/opencv2/flann -I/usr/local/include/opencv2/photo -I/usr/local/include/opencv2/video -I/usr/local/include/opencv2/features2d -I/usr/local/include/opencv2/objdetect -I/usr/local/include/opencv2/calib3d -I/usr/local/include/opencv2/ml -I/usr/local/include/opencv2/contrib -I/home/maike/Qt/5.12.4/gcc_64/include -I/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets -I/home/maike/Qt/5.12.4/gcc_64/include/QtGui -I/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent -I/home/maike/Qt/5.12.4/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Interface/mainwindow.h -o moc_mainwindow.cpp
 
 moc_pstream.cpp: ../Interface/pstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QObject \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qset.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QThread \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QObject \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QDebug \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qset.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QThread \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
 		moc_predefs.h \
-		../../../../Qt/5.12.4/gcc_64/bin/moc
-	/home/maike/Qt/5.12.4/gcc_64/bin/moc $(DEFINES) --include /home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/moc_predefs.h -I/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++ -I/home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/home/maike/Documentos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/usr/local/include -I/usr/local/include/opencv -I/usr/local/include/opencv2 -I/usr/local/include/opencv2/core -I/usr/local/include/opencv2/highgui -I/usr/local/include/opencv2/imgproc -I/usr/local/include/opencv2/flann -I/usr/local/include/opencv2/photo -I/usr/local/include/opencv2/video -I/usr/local/include/opencv2/features2d -I/usr/local/include/opencv2/objdetect -I/usr/local/include/opencv2/calib3d -I/usr/local/include/opencv2/ml -I/usr/local/include/opencv2/contrib -I/home/maike/Qt/5.12.4/gcc_64/include -I/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets -I/home/maike/Qt/5.12.4/gcc_64/include/QtGui -I/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent -I/home/maike/Qt/5.12.4/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Interface/pstream.h -o moc_pstream.cpp
+		/home/maike/Qt/5.12.4/gcc_64/bin/moc
+	/home/maike/Qt/5.12.4/gcc_64/bin/moc $(DEFINES) --include /home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/build-Interface-Desktop_Qt_5_12_4_GCC_64bit-Debug/moc_predefs.h -I/home/maike/Qt/5.12.4/gcc_64/mkspecs/linux-g++ -I/home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/home/maike/Documentos/Projetos/Stream-in-Middleware-Pacotes/ProgInterface/Interface -I/usr/local/include -I/usr/local/include/opencv -I/usr/local/include/opencv2 -I/usr/local/include/opencv2/core -I/usr/local/include/opencv2/highgui -I/usr/local/include/opencv2/imgproc -I/usr/local/include/opencv2/flann -I/usr/local/include/opencv2/photo -I/usr/local/include/opencv2/video -I/usr/local/include/opencv2/features2d -I/usr/local/include/opencv2/objdetect -I/usr/local/include/opencv2/calib3d -I/usr/local/include/opencv2/ml -I/usr/local/include/opencv2/contrib -I/home/maike/Qt/5.12.4/gcc_64/include -I/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets -I/home/maike/Qt/5.12.4/gcc_64/include/QtGui -I/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent -I/home/maike/Qt/5.12.4/gcc_64/include/QtCore -I. -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Interface/pstream.h -o moc_pstream.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1068,7 +1068,7 @@ compiler_uic_make_all: ui_mainwindow.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h
 ui_mainwindow.h: ../Interface/mainwindow.ui \
-		../../../../Qt/5.12.4/gcc_64/bin/uic
+		/home/maike/Qt/5.12.4/gcc_64/bin/uic
 	/home/maike/Qt/5.12.4/gcc_64/bin/uic ../Interface/mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
@@ -1083,540 +1083,514 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 main.o: ../Interface/main.cpp ../Interface/mainwindow.h \
 		../Interface/pstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QObject \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qset.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QThread \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCore \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QStringList \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QApplication \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qinputmethod.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QObject \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QDebug \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qset.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QThread \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCore \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QStringList \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/QApplication \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qapplication.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qguiapplication.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qinputmethod.h \
 		../../System/usercall.hpp \
 		../../System/invoke.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Interface/main.cpp
 
 mainwindow.o: ../Interface/mainwindow.cpp ../Interface/mainwindow.h \
 		../Interface/pstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QObject \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qset.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QThread \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCore \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QStringList \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QObject \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QDebug \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qset.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QThread \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/QMainWindow \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qmainwindow.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtgui-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmargins.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrect.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsize.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpalette.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcolor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgb.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qrgba64.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qbrush.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qmatrix.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpolygon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qregion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatastream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtransform.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpainterpath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qimage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixelformat.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qpixmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfont.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qfontinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qcursor.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qkeysequence.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qurlquery.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfiledevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qvector2d.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qtouchdevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtGui/qicon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrent \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/QtConcurrentDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCore \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QtCoreDepends \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventloop.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstractstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qabstracttransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydataops.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasictimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbitarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbuffer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdatetime.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborcommon.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregularexpression.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/quuid.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcbormap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcborstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfloat16.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcollator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineoption.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcommandlineparser.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcryptographichash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdiriterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeasingcurve.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qendian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qeventtransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfactoryinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfileselector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QStringList \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfinalstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuture.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrunnable.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresultstore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qfuturewatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhistorystate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qisenum.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonarray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsondocument.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qjsonobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibrary.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlibraryinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversionnumber.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlinkedlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlockfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qloggingcategory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmath.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetaobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimedatabase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmimetype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpauseanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qplugin.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpluginloader.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocess.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpropertyanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariantanimation.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qqueue.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrandom.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qreadwritelock.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qresource.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsavefile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopeguard.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsettings.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedmemory.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignalmapper.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsignaltransition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsocketnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstack.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstandardpaths.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstate.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstatemachine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstorageinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlistmodel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporarydir.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtemporaryfile.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextcodec.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadpool.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthreadstorage.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimeline.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtimezone.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtranslator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypetraits.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwaitcondition.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qwineventnotifier.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qxmlstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcoreversion.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentcompilertest.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrent_global.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentexception.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilter.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfilterkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentiteratekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmedian.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmapkernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentreducekernel.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentfunctionwrappers.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrun.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentrunbase.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
 		ui_mainwindow.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QVariant \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QApplication \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qinputmethod.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QLabel \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qlabel.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qframe.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QMenuBar \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qmenubar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qmenu.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qaction.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QPushButton \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QSpinBox \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qspinbox.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtGui/qvalidator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QStatusBar \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qstatusbar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QToolBar \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/qtoolbar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtWidgets/QWidget \
 		../../System/usercall.hpp \
 		../../System/invoke.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Interface/mainwindow.cpp
@@ -1629,74 +1603,76 @@ usercall.o: ../../System/usercall.cpp ../../System/usercall.hpp \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o usercall.o ../../System/usercall.cpp
 
 pstream.o: ../Interface/pstream.cpp ../Interface/pstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QObject \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qset.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QThread \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
-		../../../../Qt/5.12.4/gcc_64/include/QtCore/QMetaType
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QObject \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnamespace.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobal.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qconfig.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtcore-config.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsysinfo.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlogging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qflags.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmutex.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qnumeric.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qversiontagging.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstring.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qchar.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qrefcount.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qarraydata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringliteral.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringview.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qalgorithms.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiterator.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpair.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringlist.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qregexp.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcoreevent.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmetatype.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qobject_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QDebug \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qdebug.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qhash.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qmap.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qtextstream.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qiodevice.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qlocale.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvariant.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qshareddata.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qvector.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qpoint.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qset.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QThread \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/qthread.h \
+		/home/maike/Qt/5.12.4/gcc_64/include/QtCore/QMetaType \
+		../../System/usercall.hpp \
+		../../System/invoke.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pstream.o ../Interface/pstream.cpp
 
 qrc_resource.o: qrc_resource.cpp 

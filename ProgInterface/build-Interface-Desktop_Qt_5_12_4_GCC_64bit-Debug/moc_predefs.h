@@ -1,3 +1,4 @@
+#define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
 #define __FLT32X_MAX_EXP__ 1024
 #define __cpp_attributes 200809
