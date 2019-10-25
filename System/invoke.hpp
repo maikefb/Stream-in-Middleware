@@ -39,6 +39,11 @@
 #define PORT_MASTER 3128
 #define PORT 3129
 
+//Variavel para contar os pacotes perdidos
+#define N 40000
+//Varialvel de MAXIMUM TRASMISSION UNIT (MTU)
+#define MTU 1450  //Utilizado no momento 4096  -> Testar 1450
+
 #define LARGURA 640
 #define ALTURA 480
 
@@ -157,5 +162,6 @@ void *video(void *arg);
 void *photo_periodical(void *arg);
 void photo();
 void debuger(int erro);
+void conta_pacotes(int pkt);
 /* funcao principal (usada para teste) */
 //int main(int argc, char const *argv[]);

@@ -35,7 +35,6 @@ int invoke(parameters *arg)
     break;
   case STREAM_START:
     control.stream = ON;
-    //pthread_create(&t1, NULL, stream, (void *) arg);
     break;
   case STREAM_STOP:
     control.stream = OFF;
@@ -50,14 +49,12 @@ int invoke(parameters *arg)
     char str[32];
     delay = (long)*(arg->p0);
     control.photo = ON;
-    //pthread_create(&t2, NULL, photo_periodical, (void *) arg);
     break;
   case PHOTO_PERIOD_STOP:
     control.photo = OFF;
     break;
   case VIDEO_START:
     control.video = ON;
-    //pthread_create(&t3, NULL, video, (void *) arg);//tirar esta linha, colocar ela em outro lugar
     break;
   case VIDEO_STOP:
     control.video = OFF;
@@ -113,7 +110,10 @@ void *client_master(void *arg)
 void *client(void *arg)
 {
   parameters *par = (parameters *)arg;
-  int bytes,r[1];
+
+  int r[1];
+  //int contapacotes = 0; //contar numero de pacotes envIADOS
+
   char buf[32];
   Mat frame = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   int imgSize = frame.total() * frame.elemSize();
@@ -163,7 +163,9 @@ void *client(void *arg)
   Mat sendTST;
   //VARIAVEIS DO TESTE DE BUFFER
 	
- while(1) {
+
+  while (true) { //contapacotes< N
+
     #ifdef ENABLE_RASPICAM
       CAM.grab();
       CAM.retrieve(frame);
@@ -179,18 +181,30 @@ void *client(void *arg)
     foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
     foto_parametros.push_back(80);
     imencode(".jpg",sendTST,encode,foto_parametros);
-    int total = 1 + (encode.size() - 1) / 4096;
+    int total = 1 + (encode.size() - 1) / MTU;
     int ibuff[1];
     ibuff[0] = total;
-    bytes = sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
+
+    sendto(s1,ibuff,sizeof(int),0,(struct sockaddr *)&cli, slen);
+    //contapacotes ++; //CONTADOR PACOTES ENVIADOS
+    //conta_pacotes(contapacotes);
 
     for (int i = 0; i < total; i++) {
-    	bytes = sendto(s1,&encode[i*4096],4096,0,(struct sockaddr *)&cli, slen);
-       // printf("BYTES ENVIADOS NA SEGUNDA MENSAGEM --> %d\n",bytes);  
+    //  if (contapacotes >= N){
+    //      goto jmp;
+    //      }
+           
+    	  sendto(s1,&encode[i*MTU],MTU,0,(struct sockaddr *)&cli, slen);
+      	//contapacotes ++; //CONTADOR PACOTES ENVIADOS
+        //conta_pacotes(contapacotes);
+           
     }
 
   }
-  /* -------Fim-aplicacao------- */
+  //jmp:
+  //conta_pacotes(contapacotes);
+  //cout << "Contagem Terminada..."<<endl;
+  getchar();
   close(s0);
   pthread_exit(0);
 }
@@ -203,16 +217,16 @@ void *server_master(void *arg)
   pthread_t t1, t2, t3;    
     
   pegaip(meu_ip);
-  //printf("[SERVIDOR] Meu IP: <%s>\n", meu_ip);
+
    if (scan_clients() < 0) {
      printf("ERRO no scan_clients\n");
    }
 
   pegaip(meu_ip);
   par->p0 = (unsigned char *)(meu_ip);
-  sem_init(&sem_stream, 0, 0); //Mudei aqui de 1 para 0
-  sem_init(&sem_foto, 0, 0); //Mudei aqui de 1 para 0
-  sem_init(&sem_video, 0, 0);//Acrescentei esta linha
+  sem_init(&sem_stream, 0, 0);
+  sem_init(&sem_foto, 0, 0); 
+  sem_init(&sem_video, 0, 0);
   sem_init(&sem_fotoP, 0, 1);
   sem_init(&sem_frame, 0, 1);
   sem_init(&sem_streamQT, 0, 0);
@@ -265,6 +279,7 @@ void *server(void *arg)
     f[i] = Mat::zeros(ALTURA, LARGURA, CV_8UC3);
   }
 
+
   // Recebe imagem do cliente
 
   int ay = 0;
@@ -275,44 +290,48 @@ void *server(void *arg)
   int recvMSG;
   char iBUFF[65540];
   int ibuff;
+
+  //int contapacotes = 0 ; 
   //VARIAVEIS DO TESTE DE BUFFER
     
- for (;;) {
+  while (true) {  //contapacotes< N
     do {
     	recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
+    	//contapacotes ++ ;
+    	//conta_pacotes(contapacotes);
+
     } while(recvMSG > sizeof(int));
 
     int total_pack = ((int *) iBUFF)[0];
-    char *longbuf = new char[4096*total_pack];
+    char *longbuf = new char[MTU*total_pack];//1450
 
     for (int i = 0; i < total_pack; i++) {
         recvMSG = recvfrom(s2,&iBUFF,65540,0,(sockaddr *)&serv, &slen);
-	    
-        if (recvMSG != 4096) {
+
+        //contapacotes ++ ;
+        //conta_pacotes(contapacotes);
+        if (recvMSG != MTU) {
+
 		    continue;
 	    }
-	    memcpy(&longbuf[i*4096],iBUFF,4096);
+	    memcpy(&longbuf[i*MTU],iBUFF,MTU);
         
     }
 
-    Mat rawData = Mat(1,4096*total_pack, CV_8UC3, longbuf);
+    Mat rawData = Mat(1,MTU*total_pack, CV_8UC3, longbuf);
     Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
 
     frame = frameMod;
     frame_photo = frame;
     free(longbuf);
+    sem_post(&sem_stream);
+  	sem_post(&sem_streamQT);
+    sem_post(&sem_video);
+    sem_post(&sem_fotoP);
+    
 
-    	sem_post(&sem_stream);
-    	sem_post(&sem_streamQT);
-  
-    	sem_post(&sem_video);
-   
-    	sem_post(&sem_fotoP);
-  
-    //resize(cacete,frame,Size(640,480),0,0, INTER_LINEAR);
-        
-   
   }
+  //conta_pacotes(contapacotes);
   close(sock_fd);
   pthread_exit(0);
 }
@@ -364,6 +383,7 @@ Mat stream_qt()
 {
   sem_wait(&sem_streamQT);
   Mat frame_qt = frame;
+
   return frame_qt;
 }
 
@@ -375,9 +395,9 @@ void *photo_periodical(void *arg)
   	sem_wait(&sem_fotoP);
   	if(control.photo == ON) {
     		photo();
-		
-	  	sleep((int)delay);
-  	} 
+	  	  sleep((int)delay);
+  	}  
+
   }
   pthread_exit(0);
 }
@@ -395,9 +415,9 @@ void photo()
   tempo = gmtime(&t);
 
   sprintf(foto,"FOTO-%d-%d-%d-%d:%d:%d.jpg", tempo->tm_year + 1900, tempo->tm_mon, tempo->tm_mday, tempo->tm_hour, tempo->tm_min, tempo->tm_sec);
-	
+
   imwrite(foto, frame_photo, foto_parametros);    
-  
+
   return;
 }
 
@@ -414,7 +434,6 @@ void *video(void *arg)
 		}
 		video.release();
   }
-  //pthread_exit(0);
 }
 
 void debuger(int erro)
@@ -447,4 +466,14 @@ int pegaip(char *var)
  system("rm ip.txt");
  fclose(fd);
  return 0;
+}
+
+void conta_pacotes(int pkt)
+{
+
+  ofstream file;
+  file.open("Dados Pacotes.txt",ios::app);
+  file <<pkt << endl;
+  file.close();
+  
 }

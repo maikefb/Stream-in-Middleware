@@ -38,16 +38,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    ../../../Middleware_UDP_1.1/System/invoke.cpp \
-    ../../../Middleware_UDP_1.1/System/usercall.cpp \
+    ../../System/invoke.cpp \
+    ../../System/usercall.cpp \
     pstream.cpp
 
 
 # Apagar a linha do invoke.hpp e usercall.hpp para poder configurar novamente
 HEADERS += \
         mainwindow.h \
-    ../../../Middleware_UDP_1.1/System/invoke.hpp \
-    ../../../Middleware_UDP_1.1/System/usercall.hpp \
+    ../../System/invoke.hpp \
+    ../../System/usercall.hpp \
     pstream.h
 
 
