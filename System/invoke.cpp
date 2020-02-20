@@ -1,4 +1,6 @@
 #include "invoke.hpp"
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/videoio.hpp>
 
 // g++ invoke.cpp -pthread -o midd `pkg-config --cflags --libs opencv`
 
@@ -144,9 +146,9 @@ void *client(void *arg)
 
   #ifdef ENABLE_RASPICAM
     RaspiCam_Cv CAM;
-    CAM.set(CV_CAP_PROP_FORMAT, CV_8UC3);
-    CAM.set(CV_CAP_PROP_FRAME_HEIGHT,480);
-    CAM.set(CV_CAP_PROP_FRAME_WIDTH,640);
+    CAM.set(CAP_PROP_FORMAT, CV_8UC3);
+    CAM.set(CAP_PROP_FRAME_HEIGHT,480);
+    CAM.set(CAP_PROP_FRAME_WIDTH,640);
     if(!CAM.open()){
       printf("ERRO NA CÂMERA");
     }
@@ -178,7 +180,7 @@ void *client(void *arg)
     //resize(frame,sendTST,Size(300,300),0,0, INTER_LINEAR);
     sendTST = frame;
     vector<int> foto_parametros;
-    foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
+    foto_parametros.push_back(IMWRITE_JPEG_QUALITY);
     foto_parametros.push_back(80);
     imencode(".jpg",sendTST,encode,foto_parametros);
     int total = 1 + (encode.size() - 1) / MTU;
@@ -249,7 +251,7 @@ void *server(void *arg)
   int imgSize = frame.total() * frame.elemSize();
   uchar *frm = frame.data;
   vector<int> foto_parametros;
-  foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
+  foto_parametros.push_back(IMWRITE_JPEG_QUALITY);
   foto_parametros.push_back(95);
 
   socklen_t slen = sizeof(serv);
@@ -319,7 +321,7 @@ void *server(void *arg)
     }
 
     Mat rawData = Mat(1,MTU*total_pack, CV_8UC3, longbuf);
-    Mat frameMod = imdecode(rawData, CV_LOAD_IMAGE_COLOR);
+    Mat frameMod = imdecode(rawData, IMREAD_COLOR);
 
     frame = frameMod;
     frame_photo = frame;
@@ -408,7 +410,7 @@ void photo()
   char foto[32];
   struct tm *tempo;
   vector<int> foto_parametros;
-  foto_parametros.push_back(CV_IMWRITE_JPEG_QUALITY);
+  foto_parametros.push_back(IMWRITE_JPEG_QUALITY);
   foto_parametros.push_back(95);
 
   time(&t);
@@ -426,7 +428,7 @@ void *video(void *arg)
 	if (control.video == ON) {
 		const String vi("Avideo.avi");
 		Size tamanho(640,480);
-		VideoWriter video(vi, CV_FOURCC('M','J','P','G'), 3.0, tamanho, true);
+		VideoWriter video(vi, VideoWriter::fourcc('M','J','P','G'), 3.0, tamanho, true);
 
 		while (control.video == ON) {
 			sem_wait(&sem_video);
