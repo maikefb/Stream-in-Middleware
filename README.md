@@ -42,7 +42,7 @@ O sistema desenvolvido é baseado no modelo cliente/servidor. O servidor executa
  
  > Descomente a linha 30 do arquivo /System/invoke.hpp
  
- > Ponha "$(FLAGOPENCV)" nas linhas 12,15,18 do "makefile" se nao existir
+ > Ponha "$(FLAGRASP)" nas linhas 12,15,18 do "makefile" se nao existir
  #### Se for Utilizar com uma WebCan
  
  > Comente a linha 30 do arquivo /System/invoke.hpp
