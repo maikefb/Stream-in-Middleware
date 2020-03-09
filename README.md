@@ -49,5 +49,5 @@ O sistema desenvolvido é baseado no modelo cliente/servidor. O servidor executa
  
  > Descomente a linha 27 do arquivo /System/invoke.hpp
  
- > Tire "$(FLAGOPENCV)" nas linhas 12,15,18 do "makefile"
+ > Tire "$(FLAGRASP)" nas linhas 12,15,18 do "makefile"
  
